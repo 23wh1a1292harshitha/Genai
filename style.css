@@ -1,0 +1,160 @@
+/* Color Variables */
+:root {
+    --blue: #5A67D8;
+    --lavender: #B794F4;
+    --peach: #FEB2B2;
+    --dark-blue: #2C5282;
+    --bright-blue: #00BFFF;
+    --bright-pink: #FF69B4;
+    --bright-green: #32CD32;
+    --bright-orange: #FF8C00;
+}
+
+/* Apply gradient to the Streamlit app container */
+.stApp {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background: linear-gradient(to right, var(--blue), var(--lavender));
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Remaining styles */
+.stTitle {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.stTextInput > div > div > input {
+    border: 2px solid var(--lavender);
+    border-radius: 15px;
+    padding: 18px;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    color: var(--dark-blue);
+    transition: all 0.3s ease;
+}
+
+.stTextInput > div > div > input:focus {
+    border-color: var(--peach);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #f4f4f4;
+}
+
+.stButton > button {
+    background-color: var(--blue);
+    color: white;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.stButton > button:hover {
+    background-color: var(--lavender);
+    transform: translateY(-5px);
+}
+
+.stTextArea > div > div > textarea {
+    border: 1px solid var(--lavender);
+    border-radius: 15px;
+    padding: 18px;
+    font-size: 16px;
+    width: 100%;
+    height: 300px !important;
+    resize: none;
+    box-shadow: 0 6px 12px rgba(227, 160, 160, 0.1);
+    background: #ffffff;
+    color: var(--dark-blue);
+    transition: all 0.3s ease;
+}
+
+.stTextArea > div > div > textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: var(--lavender);
+}
+
+.stAudio {
+    margin-top: 20px; /* Reduced margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.stAudio audio {
+    border-radius: 20px; /* Slightly smaller radius */
+    width: 80%; /* Reduced width */
+    max-width: 400px; /* Reduced max width */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly less shadow */
+    background: linear-gradient(to right, var(--bright-blue), var(--bright-pink), var(--bright-green), var(--bright-orange)); /* Colorful gradient */
+    padding: 10px; /* Reduced padding */
+    border: none; /* Removed border */
+}
+
+.stAudio audio::-webkit-media-controls-play-button {
+    color: white; /* White play button */
+}
+
+.stAudio audio::-webkit-media-controls-current-time-display,
+.stAudio audio::-webkit-media-controls-time-remaining-display {
+    color: white;
+}
+
+.stAudio audio::-webkit-media-controls-timeline {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.stAudio audio::-webkit-media-controls-timeline-played {
+    background-color: white;
+}
+
+/* Warning & Error Styling */
+.stWarning, .stError {
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    font-size: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stWarning {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+}
+
+.stError {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
